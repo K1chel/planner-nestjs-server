@@ -13,7 +13,7 @@ export class TimeBlockService {
   async getAll(userId: string) {
     return this.prisma.timeBlock.findMany({
       where: { userId },
-      orderBy: { createdAt: 'asc' },
+      orderBy: { order: 'asc' },
     });
   }
 
